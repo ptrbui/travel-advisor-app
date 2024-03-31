@@ -13,11 +13,7 @@ export default function Map({setCoordinates, setBounds,coordinates, places, setc
     const isDesktop = useMediaQuery('(min-width:600px)');
     // console.log(weatherData);
 
-
-
-
-
-    return (
+return (
         <div className={classes.mapContainer}>
             <GoogleMapReact
                 bootstrapURLKeys={{key:process.env.REACT_APP_GOOGLE_MAPS_API_KEY}}
