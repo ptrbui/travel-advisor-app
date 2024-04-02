@@ -3,8 +3,6 @@ import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, 
 import useStyles from './styles';
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
 
-
-
 export default function List({places,childClicked,isLoading,type,setType,rating,setRating}) {
     // console.log({childClicked});
     // console.log(childClicked);

@@ -3,23 +3,24 @@ import React,{useState,useEffect} from 'react';
 import Header from "./components/Header/Header";
 import List from "./components/List/List";
 import Map from "./components/Map/Map";
-import PlaceDetails from './components/PlaceDetails/PlaceDetails';
 import { CssBaseline,Grid } from '@material-ui/core';
-import {getPlacesData, getWeatherData} from './api';
+import {getPlacesData} from './api';
 
 export default function App() {
-    const [places,setPlaces] = useState([]);
-    const [weatherData,setWeatherData] = useState([]);
-    const [coordinates,setCoordinates] = useState({});
-    const [bounds,setBounds] = useState({});
-
-    const [childClicked, setchildClicked] = useState(null);
-
-    const [isLoading, setIsLoading] = useState(false);
     const [type,setType] = useState('restaurants');
     const [rating,setRating] = useState('');
 
+    const [coordinates,setCoordinates] = useState({});
+    const [bounds,setBounds] = useState({});
+
+    /*
+    const [weatherData,setWeatherData] = useState([]);
+     */
     const [filteredPlaces,setFilteredPlaces] = useState([]);
+    const [places,setPlaces] = useState([]);
+
+    const [childClicked, setchildClicked] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(()=>{
         navigator.geolocation.getCurrentPosition(({coords:{latitude,longitude}})=>{
@@ -36,12 +37,14 @@ export default function App() {
     useEffect(()=>{
         if(bounds.sw && bounds.ne){
             setIsLoading(true)
-            // console.log(coordinates,bounds);
+
+            /*
             getWeatherData(coordinates.lat,coordinates.lng)
                 .then((data)=> {
-                    // console.log(data);
                     setWeatherData(data)
                 });
+             */
+
             getPlacesData(type,bounds.sw,bounds.ne)
                 .then((data)=>{
                     // console.log(data);
@@ -71,7 +74,10 @@ export default function App() {
                          coordinates = {coordinates}
                          places = {filteredPlaces?.length ? filteredPlaces : places}
                          setchildClicked = {setchildClicked}
-                         weatherData = {weatherData} />
+                         /*
+                         weatherData = {weatherData}
+                          */
+                    />
                 </Grid>
             </Grid>
 

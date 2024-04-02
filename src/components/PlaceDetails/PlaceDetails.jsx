@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box,Typography,Card, CardMedia,CardActions,CardContent,Chip, Button } from '@material-ui/core';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-import PhonrIcon from '@material-ui/icons/Phone';
+import PhoneIcon from '@material-ui/icons/Phone';
 import Rating from '@material-ui/lab/Rating';
 
 import useStayles from './styles';
@@ -58,7 +58,7 @@ export default function PlaceDetails({place,selected,refProp}) {
 
                 {place?.phone && (
                     <Typography gutterBottom variant='subtitle2' color='textSecondary' className={classes.subtitle}>
-                        <PhonrIcon /> {place.phone}
+                        <PhoneIcon /> {place.phone}
                     </Typography>
                 )}
 
