@@ -1,4 +1,3 @@
-
 import React,{useState,useEffect} from 'react';
 import Header from "./components/Header/Header";
 import List from "./components/List/List";
@@ -13,14 +12,13 @@ export default function App() {
     const [coordinates,setCoordinates] = useState({});
     const [bounds,setBounds] = useState({});
 
-    /*
-    const [weatherData,setWeatherData] = useState([]);
-     */
     const [filteredPlaces,setFilteredPlaces] = useState([]);
     const [places,setPlaces] = useState([]);
 
-    const [childClicked, setchildClicked] = useState(null);
+    const [childClicked, setChildClicked] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
+
+    const [showHeatMap, setShowHeatMap] = useState(false); // New state
 
     useEffect(()=>{
         navigator.geolocation.getCurrentPosition(({coords:{latitude,longitude}})=>{
@@ -37,14 +35,6 @@ export default function App() {
     useEffect(()=>{
         if(bounds.sw && bounds.ne){
             setIsLoading(true)
-
-            /*
-            getWeatherData(coordinates.lat,coordinates.lng)
-                .then((data)=> {
-                    setWeatherData(data)
-                });
-             */
-
             getPlacesData(type,bounds.sw,bounds.ne)
                 .then((data)=>{
                     // console.log(data);
@@ -66,22 +56,23 @@ export default function App() {
                           type = {type}
                           setType = {setType}
                           rating = {rating}
-                          setRating = {setRating} />
+                          setRating = {setRating}
+
+                          showHeatMap={showHeatMap}
+                          setShowHeatMap={setShowHeatMap}
+                    />
                 </Grid>
                 <Grid item xs={12} md={8}>
                     <Map setCoordinates = {setCoordinates}
                          setBounds = {setBounds}
                          coordinates = {coordinates}
                          places = {filteredPlaces?.length ? filteredPlaces : places}
-                         setchildClicked = {setchildClicked}
-                         /*
-                         weatherData = {weatherData}
-                          */
+                         setChildClicked = {setChildClicked}
+
+                         showHeatMap={showHeatMap}
                     />
                 </Grid>
             </Grid>
-
-
         </>
     )
 }
