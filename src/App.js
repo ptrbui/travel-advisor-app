@@ -18,8 +18,6 @@ export default function App() {
     const [childClicked, setChildClicked] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
 
-    const [showHeatMap, setShowHeatMap] = useState(false); // New state
-
     useEffect(()=>{
         navigator.geolocation.getCurrentPosition(({coords:{latitude,longitude}})=>{
             setCoordinates({lat:latitude,lng:longitude})
@@ -56,11 +54,7 @@ export default function App() {
                           type = {type}
                           setType = {setType}
                           rating = {rating}
-                          setRating = {setRating}
-
-                          showHeatMap={showHeatMap}
-                          setShowHeatMap={setShowHeatMap}
-                    />
+                          setRating = {setRating} />
                 </Grid>
                 <Grid item xs={12} md={8}>
                     <Map setCoordinates = {setCoordinates}
@@ -68,8 +62,6 @@ export default function App() {
                          coordinates = {coordinates}
                          places = {filteredPlaces?.length ? filteredPlaces : places}
                          setChildClicked = {setChildClicked}
-
-                         showHeatMap={showHeatMap}
                     />
                 </Grid>
             </Grid>

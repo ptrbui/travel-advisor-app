@@ -1,9 +1,10 @@
-import React, { useState, useEffect, createRef } from 'react';
-import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select, Switch, FormControlLabel} from '@material-ui/core';
+
+import React,{useState, useEffect, createRef} from 'react';
+import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select, } from '@material-ui/core';
 import useStyles from './styles';
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
 
-export default function List({ places, childClicked, isLoading, type, setType, rating, setRating, showHeatMap, setShowHeatMap }) {
+export default function List({ places, childClicked, isLoading, type, setType, rating, setRating }) {
     const classes = useStyles();
     const [elRefs,setElRefs] = useState([]);
 
@@ -14,13 +15,7 @@ export default function List({ places, childClicked, isLoading, type, setType, r
 
     return (
         <div className={classes.container}>
-
-            <FormControlLabel
-                control={<Switch checked={ showHeatMap } onChange={(e) => setShowHeatMap(e.target.checked)} />}
-                label="Show Heat Map"
-            />
-
-            <Typography variant='h4'>Restaurants, Hotels & Attractions nearby</Typography>
+            <Typography variant='h4'>Restaurants, Hotels & Attractions around you</Typography>
             {isLoading?(
                 <div className={classes.loading}>
                     <CircularProgress size="5rem" /></div>
