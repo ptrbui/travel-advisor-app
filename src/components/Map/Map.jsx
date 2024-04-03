@@ -34,7 +34,7 @@ export default function Map({ setCoordinates, setBounds,coordinates, places, set
                             lng = {Number(place.longitude)}
                             key = {i}>
                             {
-                                !isDesktop?(
+                                !isDesktop? (
                                     < LocationOnOutlinedIcon color="primary" fontSize='large' />
                                 ):(
                                     <Paper elevation={3} className={classes.paper}>
