@@ -3,16 +3,16 @@ import { Box, Typography, Card, CardMedia, CardActions, CardContent, Chip, Butto
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import PhoneIcon from '@material-ui/icons/Phone';
 import Rating from '@material-ui/lab/Rating';
-import useStayles from './styles';
+import useStyles from './styles';
 
 export default function PlaceDetails({place,selected,refProp}) {
-    const classes = useStayles();
+    const classes = useStyles();
     if(selected) refProp?.current?.scrollIntoView({behavior: "smooth", block:"start"});
     return (
         <Card elevation={6}>
             <CardMedia
                 style={{height:300}}
-                image={place.photo ? place.photo.images.large.url:'https://t3.ftcdn.net/jpg/02/21/40/16/240_F_221401603_6urJw6Di9KjlgcPgLfkdVLHtc5Q21aCx.jpg'}
+                image={place.photo ? place.photo.images.large.url : 'https://t3.ftcdn.net/jpg/02/21/40/16/240_F_221401603_6urJw6Di9KjlgcPgLfkdVLHtc5Q21aCx.jpg'}
                 title={place.name}
             />
             <CardContent>
@@ -21,7 +21,7 @@ export default function PlaceDetails({place,selected,refProp}) {
                 </Typography>
 
                 <Box display="flex" justifyContent="space-between">
-                    <Rating value={Number(place.rating) }readOnly />
+                    <Rating value={Number(place.rating)} readOnly />
                     <Typography gutterBottom variant='subtitle1'>Out of {place.num_reviews}</Typography>
                 </Box>
 
