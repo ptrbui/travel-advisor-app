@@ -20,10 +20,12 @@ function Header({setCoordinates}) {
             <Toolbar className={classes.toolbar}>
                 <Typography variant='h5' className={classes.bigText}>
                     TRAVEL ADVISOR APP
+                    <span style={{ fontStyle: 'normal', marginLeft: '12px' }}>{'\u{1F30D}'}</span>
                     <Typography className={classes.smallText}>
                         Created by Peter Bui
                     </Typography>
                 </Typography>
+
                 <Box display='flex'>
                     <Typography variant='h6' className={classes.title}>
                         Explore new places

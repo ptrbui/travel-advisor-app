@@ -14,7 +14,27 @@ export default function List({ places, childClicked, isLoading, type, setType, r
 
     return (
         <div className={classes.container}>
-            <Typography variant='h5'>Restaurants, Hotels & Attractions</Typography>
+            <Typography variant='h5' style={{ marginBottom: '20px', fontWeight: 'bold' }}>
+                About
+            </Typography>
+
+            <div style={{ marginLeft: '20px', marginBottom: '20px' }}>
+                <Typography variant='body1' style={{ fontFamily: 'Courier', color: 'gray', fontWeight: 'bold' }}>
+                    Here's a neat little app that you can use to look at restaurants, hotels, and attractions nearby.
+                    If you don't want to use your current location, just use the search box in the top right corner to explore wherever you'd like!
+                    I built this using
+                    <a href="https://reactjs.org/" style={{ color: '#FF69B4', textDecoration: 'none' }}> React.js</a>,
+                    <a href="https://nodejs.org/" style={{ color: '#FF69B4', textDecoration: 'none' }}> Node.js</a>,
+                    <a href="https://cloud.google.com/" style={{ color: '#FF69B4', textDecoration: 'none' }}> Google Cloud Platform</a> (Maps + Places APIs), and
+                    <a href="https://material-ui.com/" style={{ color: '#FF69B4', textDecoration: 'none' }}> Material-UI</a>.
+                    Enjoy :)
+                </Typography>
+            </div>
+
+            <Typography variant='h5' style={{ marginBottom: '20px', fontWeight: 'bold' }}>
+                Restaurants, Hotels & Attractions
+            </Typography>
+
             {isLoading?(
                 <div className={classes.loading}>
                     <CircularProgress size="5rem" /></div>
