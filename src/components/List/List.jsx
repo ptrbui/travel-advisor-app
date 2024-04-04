@@ -25,6 +25,7 @@ export default function List({ places, childClicked, isLoading, type, setType, r
                     I built this using
                     <a href="https://reactjs.org/" style={{ color: '#FF69B4', textDecoration: 'none' }}> React.js</a>,
                     <a href="https://nodejs.org/" style={{ color: '#FF69B4', textDecoration: 'none' }}> Node.js</a>,
+                    <a href="https://https://rapidapi.com/hub/" style={{ color: '#FF69B4', textDecoration: 'none' }}> Rapid API</a> (Travel Advisor API)
                     <a href="https://cloud.google.com/" style={{ color: '#FF69B4', textDecoration: 'none' }}> Google Cloud Platform</a> (Maps + Places APIs), and
                     <a href="https://material-ui.com/" style={{ color: '#FF69B4', textDecoration: 'none' }}> Material-UI</a>.
                     Enjoy :)
