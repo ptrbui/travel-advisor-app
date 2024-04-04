@@ -18,6 +18,7 @@ function Header({setCoordinates}) {
     return(
         <AppBar position='static'>
             <Toolbar className={classes.toolbar}>
+
                 <Typography variant='h5' className={classes.bigText}>
                     TRAVEL ADVISOR APP
                     <span style={{ fontStyle: 'normal', marginLeft: '12px' }}>{'\u{1F30D}'}</span>
@@ -39,6 +40,7 @@ function Header({setCoordinates}) {
                         </div>
                     </Autocomplete>
                 </Box>
+
             </Toolbar>
         </AppBar>
     )

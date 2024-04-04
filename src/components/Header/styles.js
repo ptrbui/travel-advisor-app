@@ -3,9 +3,7 @@ import { alpha, makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
     title: {
         display: 'none',
-        [theme.breakpoints.up('sm')]: {
-            display: 'block',
-        },
+        [theme.breakpoints.up('sm')]: {display: 'block'},
     },
     bigText: {
         fontWeight: 'bold',
@@ -35,9 +33,10 @@ export default makeStyles((theme) => ({
         padding: theme.spacing(1, 1, 1, 0), paddingLeft: `calc(1em + ${theme.spacing(4)}px)`, transition: theme.transitions.create('width'), width: '100%', [theme.breakpoints.up('md')]: { width: '20ch' },
     },
     toolbar: {
-        display: 'flex', justifyContent: 'space-between',
+        display: 'flex',
+        justifyContent: 'space-between',
     },
     appbar: {
-        // background: 'linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0))',
+        //background: 'linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0))',
     },
 }));
