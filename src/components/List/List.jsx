@@ -20,7 +20,7 @@ export default function List({ places, childClicked, isLoading, type, setType, r
 
             <div style={{ marginLeft: '20px', marginBottom: '20px' }}>
                 <Typography variant='body1' style={{ fontFamily: 'Courier', color: 'gray', fontWeight: 'bold' }}>
-                    Here's a neat little app that you can use to look at restaurants, hotels, and attractions nearby.
+                    Here's a neat app that you can use to look at restaurants, hotels, and attractions nearby.
                     If you don't want to use your current location, just use the search box in the top right corner to explore wherever you'd like!
                     I built this using
                     <a href="https://react.dev/" target="_blank" style={{ color: '#FF69B4', textDecoration: 'none' }}> React.js</a>,
