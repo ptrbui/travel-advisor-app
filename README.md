@@ -1,5 +1,5 @@
 # Travel Advisor Web Application
-Here's a neat app that you can use to look at restaurants, hotels, and attractions nearby. If you don't want to use your current location, just use the search box in the top right corner to explore wherever you'd like! I built this using [React.js](https://react.dev/), [Node.js](https://nodejs.org/en), [Rapid API](https://rapidapi.com/hub/) (Travel Advisor API), [Google Cloud Platform](https://cloud.google.com/) (Maps + Places APIs), and [Material-UI](https://mui.com/material-ui/). Enjoy! --Peter
+Here's a neat app that you can use to look at restaurants, hotels, and attractions nearby. If you don't want to use your current location, just use the search box in the top right corner to explore wherever you'd like! I built this using [ReactJS](https://react.dev/), [Node.js](https://nodejs.org/en), [Rapid API](https://rapidapi.com/hub/) (Travel Advisor API), [Google Cloud Platform](https://cloud.google.com/) (Maps + Places APIs), and [Material-UI](https://mui.com/material-ui/). Enjoy! --Peter
 
 ![Screenshot of Travel Advisor App](media/demo.png)
 
